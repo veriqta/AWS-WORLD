@@ -1,340 +1,179 @@
-<div align="center">
-  <img src="assets/banners/aws-world-cover-v1.svg" alt="AWS World, from cloud foundations to secure production systems" width="680">
+<p align="center">
+  <img src="assets/banners/repository/aws-world-cover.svg" alt="AWS World, from the first secure account to production cloud engineering" width="720">
+</p>
 
-  <h1>AWS World</h1>
+# AWS World
 
-  <p><strong>Learn AWS. Build real systems. Investigate failures. Operate production with confidence.</strong></p>
+AWS World is a structured learning and engineering center for Amazon Web Services. It connects foundational cloud knowledge with architecture, security, automation, cost management, troubleshooting, reliability, production operations, certification preparation, and portfolio-ready implementation.
 
-  <p>
-    A complete learning and engineering center for AWS Cloud, solutions architecture,
-    security, CloudOps, DevOps, networking, data, artificial intelligence,
-    FinOps, migration, reliability, and production operations.
-  </p>
+The repository is designed for learners and practitioners who need more than service descriptions. Resources are organized to explain **why a service exists, how it behaves, how to implement it, how it fails, how to secure it, how much it may cost, how to verify it, and when a different design is better**.
 
-  <p>
-    <a href="00-Start-Here/README.md">Start Here</a> ·
-    <a href="01-Beginner-to-Advanced/README.md">Learning Path</a> ·
-    <a href="20-Projects/README.md">Projects</a> ·
-    <a href="21-Labs/README.md">Labs</a> ·
-    <a href="22-Troubleshooting/README.md">Troubleshooting</a> ·
-    <a href="25-Certification-Preparation/README.md">Certifications</a>
-  </p>
-</div>
+> Begin with [`00-Start-Here`](00-Start-Here/README.md). Secure the account, configure billing safeguards, understand cleanup, and choose a learning path before creating resources.
 
----
+## What AWS World covers
 
-## AWS knowledge that survives the console
+- Cloud and AWS foundations
+- Accounts, IAM, organizations, governance, and landing zones
+- Networking, DNS, hybrid connectivity, private access, and content delivery
+- Compute, storage, databases, serverless, containers, and integration
+- Infrastructure as code, automation, developer tooling, and CI/CD
+- Observability, CloudOps, production operations, and incident response
+- Solutions architecture and the AWS Well-Architected Framework
+- Security engineering, compliance, risk, detection, and forensics
+- Cost management, FinOps, commitments, allocation, and cost incidents
+- Data platforms, analytics, streaming, AI, ML, and generative AI
+- Migration, modernization, hybrid, edge, SaaS, and specialized workloads
+- Projects, labs, troubleshooting, interviews, certifications, and engineering notebooks
+- A maintained AWS service catalog and curated resources
 
-AWS World teaches more than service names and console clicks. It develops the judgment required to design, secure, automate, troubleshoot, and operate cloud systems.
+<p align="center">
+  <img src="assets/banners/repository/learning-paths.svg" alt="AWS World learning paths for beginners, engineers, architects and specialists" width="620">
+</p>
 
-The repository connects four forms of competence:
+## Who this repository serves
 
-- **Knowledge:** Understand cloud concepts, AWS services, constraints, and trade-offs.
-- **Implementation:** Build working systems through guided and independent projects.
-- **Investigation:** Diagnose realistic failures using evidence instead of guesswork.
-- **Operations:** Run workloads safely with monitoring, security, cost control, recovery, and clear ownership.
+AWS World supports:
 
-AWS provides hundreds of services. Memorizing all of them is not the goal. The goal is to understand how to select and combine services to solve real problems.
+- Complete cloud beginners and AWS Cloud Practitioner learners
+- System administrators moving into cloud engineering
+- Cloud Support and CloudOps engineers
+- Solutions architects and cloud engineers
+- DevOps, platform, and site reliability engineers
+- Security, network, data, machine-learning, and FinOps professionals
+- Cloud auditors and governance, risk, and compliance practitioners
+- Certification and technical interview candidates
 
-## Begin safely
+## Learn, build, operate, and prove
 
-> [!CAUTION]
-> AWS resources can create charges and expose systems or data when configured incorrectly. Before beginning any lab, protect the root user, enable multi-factor authentication, configure budgets and billing alerts, confirm the active account and Region, review required permissions, and read the cleanup procedure.
-
-Start with [`00-Start-Here`](00-Start-Here/README.md) before creating resources.
-
-Every lab and project should begin with an identity and configuration check:
-
-```bash
-aws sts get-caller-identity
-aws configure list
-aws configure get region
-```
-
-These commands confirm the active identity, credential source, and default Region. They do not prove that an action is safe or free.
-
-## Choose a learning path
-
-| Goal | Recommended starting point | Progression |
+| Dimension | Purpose | Evidence produced |
 | --- | --- | --- |
-| New to cloud computing | [`00-Start-Here`](00-Start-Here/README.md) | Safety → cloud foundations → core AWS services → guided labs |
-| Learn AWS from beginner to advanced | [`01-Beginner-to-Advanced`](01-Beginner-to-Advanced/README.md) | Foundations → implementation → architecture → operations |
-| Become a Solutions Architect | [`13-Well-Architected-and-Solutions-Architecture`](13-Well-Architected-and-Solutions-Architecture/README.md) | Requirements → trade-offs → patterns → architecture reviews |
-| Become a Cloud or CloudOps Engineer | [`12-Observability-and-CloudOps`](12-Observability-and-CloudOps/README.md) | Provisioning → monitoring → automation → incidents → recovery |
-| Become an AWS Security Engineer | [`14-Security-Risk-and-Compliance`](14-Security-Risk-and-Compliance/README.md) | Identity → data protection → detection → response → governance |
-| Build cloud delivery platforms | [`10-Infrastructure-as-Code-and-Automation`](10-Infrastructure-as-Code-and-Automation/README.md) | IaC → CI/CD → policy → testing → platform operations |
-| Learn AWS networking | [`04-Networking-and-Content-Delivery`](04-Networking-and-Content-Delivery/README.md) | VPC → routing → DNS → hybrid → multi-Region |
-| Prepare for certification | [`25-Certification-Preparation`](25-Certification-Preparation/README.md) | Current objectives → domain study → labs → readiness assessment |
-| Build a portfolio | [`20-Projects`](20-Projects/README.md) | Guided projects → independent builds → capstones |
-| Practise production failures | [`22-Troubleshooting`](22-Troubleshooting/README.md) | Symptoms → evidence → hypothesis → recovery → prevention |
+| Learn | Build accurate mental models and service knowledge | Notes, knowledge checks, comparisons |
+| Build | Implement systems through labs and projects | Infrastructure code, scripts, diagrams, tests |
+| Operate | Investigate failures, manage change, and recover services | Runbooks, timelines, verification, postmortems |
+| Prove | Prepare for roles, interviews, and certifications | Portfolio records, assessments, scenario responses |
 
-<div align="center">
-  <img src="assets/diagrams/aws-world-learning-journey-v1.svg" alt="AWS World learning journey from safe account setup through foundations, building, architecture, operations, and specialization" width="680">
-</div>
+## Choose a starting path
 
-## Explore AWS World
-
-### Foundations and core infrastructure
-
-| Area | What it develops |
-| --- | --- |
-| [`Cloud and AWS Foundations`](02-Cloud-and-AWS-Foundations/README.md) | Regions, Availability Zones, APIs, endpoints, ARNs, quotas, pricing, and shared responsibility |
-| [`Accounts, Identity and Governance`](03-Accounts-Identity-and-Governance/README.md) | IAM, Organizations, policies, federation, landing zones, audit, and multi-account control |
-| [`Networking and Content Delivery`](04-Networking-and-Content-Delivery/README.md) | VPCs, routing, DNS, load delivery, hybrid connectivity, segmentation, and packet paths |
-| [`Compute`](05-Compute/README.md) | EC2, scaling, load balancing, images, scheduling, placement, and compute selection |
-| [`Storage, Backup and Disaster Recovery`](06-Storage-Backup-and-Disaster-Recovery/README.md) | Object, block and file storage, lifecycle, replication, backup, restore, RPO, and RTO |
-| [`Databases and Caching`](07-Databases-and-Caching/README.md) | Relational, key-value, document, graph, time-series, caching, and database selection |
-
-### Applications, automation and platforms
-
-| Area | What it develops |
-| --- | --- |
-| [`Serverless and Application Integration`](08-Serverless-and-Application-Integration/README.md) | Functions, APIs, events, queues, workflows, retries, ordering, and idempotency |
-| [`Containers and Orchestration`](09-Containers-and-Orchestration/README.md) | ECR, ECS, EKS, Fargate, workload identity, networking, storage, scaling, and upgrades |
-| [`Infrastructure as Code and Automation`](10-Infrastructure-as-Code-and-Automation/README.md) | CloudFormation, CDK, Terraform, testing, drift, policy, state, and safe automation |
-| [`Developer Tools and CI/CD`](11-Developer-Tools-and-CI-CD/README.md) | Build, artifact, deployment, OIDC, delivery strategies, quality gates, and rollback |
-| [`Observability and CloudOps`](12-Observability-and-CloudOps/README.md) | Metrics, logs, traces, events, dashboards, alarms, runbooks, and operational investigation |
-
-### Architecture, security and organizational control
-
-| Area | What it develops |
-| --- | --- |
-| [`Well-Architected and Solutions Architecture`](13-Well-Architected-and-Solutions-Architecture/README.md) | Requirements, constraints, architecture decisions, fault isolation, resilience, and trade-offs |
-| [`Security, Risk and Compliance`](14-Security-Risk-and-Compliance/README.md) | Preventive, detective and responsive controls across identity, data, network, workload, and organization |
-| [`Cost Management and FinOps`](15-Cost-Management-and-FinOps/README.md) | Cost visibility, allocation, forecasting, commitment management, anomalies, and unit economics |
-| [`Data, Analytics and Streaming`](16-Data-Analytics-and-Streaming/README.md) | Data lakes, warehouses, processing, governance, quality, batch, and streaming architectures |
-| [`AI, ML and Generative AI`](17-AI-ML-and-Generative-AI/README.md) | SageMaker, Bedrock, model selection, RAG, agents, MLOps, evaluation, security, and responsible AI |
-| [`Migration, Hybrid and Edge`](18-Migration-Hybrid-and-Edge/README.md) | Discovery, migration strategies, waves, cutover, hybrid services, rollback, and modernization |
-| [`Reliability, Performance and Resilience`](19-Reliability-Performance-and-Resilience/README.md) | Capacity, scaling, throttling, load testing, chaos engineering, game days, and recovery |
-
-<div align="center">
-  <img src="assets/diagrams/aws-world-engineering-domains-v1.svg" alt="AWS World engineering domains covering foundations, infrastructure, applications, architecture, security, operations, data, AI, FinOps, migration, and reliability" width="680">
-</div>
-
-## Learn by building
-
-Knowledge becomes useful when it can be implemented, tested, explained, and recovered.
-
-AWS World projects are designed to produce real engineering evidence:
-
-- Architecture diagrams
-- Infrastructure as Code
-- CLI, SDK, or automation scripts
-- Security and IAM decisions
-- Cost estimates and budget controls
-- Observability and alerting
-- Acceptance tests
-- Failure-injection evidence
-- Troubleshooting records
-- Recovery and rollback procedures
-- Operations runbooks
-- Cleanup verification
-- Portfolio and interview notes
-
-### Project levels
-
-| Level | Guidance | Expected ownership |
+| Goal | Start here | Continue with |
 | --- | --- | --- |
-| Junior | Complete instructions, commands, expected output, tests, and reference solution | Reproduce safely and explain each major step |
-| Mid-level | Architecture requirements, starter components, test criteria, and partial guidance | Make and defend implementation decisions |
-| Senior | Production scenario, constraints, failure tests, risk requirements, and review criteria | Design for security, reliability, cost, operations, and organizational impact |
-| Capstone | Milestones, integration requirements, game days, and portfolio criteria | Combine multiple domains into a defensible production-style system |
+| New to cloud | [`00-Start-Here`](00-Start-Here/README.md) | [`01-Beginner-to-Advanced`](01-Beginner-to-Advanced/README.md) |
+| Become a cloud engineer | [`02-Cloud-and-AWS-Foundations`](02-Cloud-and-AWS-Foundations/README.md) | Networking, compute, storage, automation, CloudOps |
+| Become a solutions architect | [`13-Well-Architected-and-Solutions-Architecture`](13-Well-Architected-and-Solutions-Architecture/README.md) | Architecture patterns, security, reliability, FinOps |
+| Work in AWS security | [`14-Security-Risk-and-Compliance`](14-Security-Risk-and-Compliance/README.md) | Identity, networking, incident response, compliance |
+| Build DevOps and platform skills | [`10-Infrastructure-as-Code-and-Automation`](10-Infrastructure-as-Code-and-Automation/README.md) | CI/CD, containers, observability, production operations |
+| Prepare for certification | [`25-Certification-Preparation`](25-Certification-Preparation/README.md) | Exam objectives, labs, scenarios, readiness assessments |
+| Build a portfolio | [`20-Projects`](20-Projects/README.md) | Labs, capstones, notebooks, interview preparation |
 
-Explore [`20-Projects`](20-Projects/README.md) and [`21-Labs`](21-Labs/README.md).
+## Repository map
 
-## Failure is part of the lesson
-
-AWS World does not teach only successful deployments. Labs and case files include failures such as:
-
-- Access denied despite an attached IAM policy
-- Private workloads unable to reach required endpoints
-- Broken routes, DNS, security groups, and network ACLs
-- EC2 boot, metadata, storage, and Systems Manager failures
-- Load balancer health-check failures
-- Auto Scaling launch failures
-- Lambda timeouts, concurrency pressure, and retry storms
-- Queue backlogs and dead-letter accumulation
-- Database connection exhaustion, failover, lag, and lock contention
-- Container image, networking, identity, scheduling, and node failures
-- Missing logs, misleading dashboards, and noisy alerts
-- Backup success without recoverability
-- Multi-Region replication and failover errors
-- Unexpected data-transfer, NAT, logging, or idle-resource costs
-
-The investigation model is consistent:
-
-```text
-Symptom
-→ Impact and blast radius
-→ Recent changes
-→ Identity, configuration and dependency checks
-→ Metrics, logs, traces, events and CloudTrail
-→ Competing hypotheses
-→ Discriminating tests
-→ Mitigation
-→ Recovery
-→ Verification
-→ Prevention
-```
-
-Explore [`22-Troubleshooting`](22-Troubleshooting/README.md) and [`23-Production-Operations`](23-Production-Operations/README.md).
-
-## Architecture is more than drawing boxes
-
-Every architecture should identify:
-
-- Business and technical requirements
-- Assumptions and constraints
-- Availability and recovery objectives
-- Data classification and trust boundaries
-- Identity and authorization paths
-- Network and data flows
-- Regional, zonal, and global dependencies
-- Scaling behavior and service quotas
-- Observability and operational ownership
-- Failure modes and blast radius
-- Cost drivers and forecasts
-- Deployment, rollback, backup, and recovery
-- Alternatives and rejected options
-
-AWS World uses the six AWS Well-Architected pillars as a consistent review lens:
-
-<div align="center">
-  <img src="assets/diagrams/aws-world-well-architected-pillars-v1.svg" alt="Six AWS Well-Architected pillars: operational excellence, security, reliability, performance efficiency, cost optimization, and sustainability" width="680">
-</div>
-
-| Pillar | Central question |
+| Section | Responsibility |
 | --- | --- |
-| Operational excellence | Can the workload be operated, observed, changed, and improved safely? |
-| Security | Are identity, data, systems, and detection protected through explicit controls? |
-| Reliability | Can the workload withstand, recover from, and learn from failure? |
-| Performance efficiency | Are resources and architectures matched to changing demand? |
-| Cost optimization | Is value measured and waste controlled throughout the workload lifecycle? |
-| Sustainability | Is resource use reduced while required outcomes are maintained? |
+| [00-Start-Here](00-Start-Here/README.md) | Begin safely, choose a learning path, secure the AWS account, control costs, and prepare a working environment. |
+| [01-Beginner-to-Advanced](01-Beginner-to-Advanced/README.md) | Follow the main progressive path from cloud fundamentals to production AWS engineering. |
+| [02-Cloud-and-AWS-Foundations](02-Cloud-and-AWS-Foundations/README.md) | Understand the cloud concepts, global infrastructure, APIs, endpoints, quotas, pricing, and design principles used throughout AWS. |
+| [03-Accounts-Identity-and-Governance](03-Accounts-Identity-and-Governance/README.md) | Design secure identities, policies, organizations, landing zones, account boundaries, and governance controls. |
+| [04-Networking-and-Content-Delivery](04-Networking-and-Content-Delivery/README.md) | Build and investigate VPCs, routing, DNS, hybrid connectivity, private access, edge delivery, and network security. |
+| [05-Compute](05-Compute/README.md) | Select, deploy, scale, secure, and operate AWS compute platforms. |
+| [06-Storage-Backup-and-Disaster-Recovery](06-Storage-Backup-and-Disaster-Recovery/README.md) | Design durable storage, protected backups, tested restores, and recoverable workloads. |
+| [07-Databases-and-Caching](07-Databases-and-Caching/README.md) | Choose and operate relational, key-value, document, graph, time-series, warehouse, and caching services. |
+| [08-Serverless-and-Application-Integration](08-Serverless-and-Application-Integration/README.md) | Build event-driven systems with functions, APIs, queues, topics, workflows, and managed integration services. |
+| [09-Containers-and-Orchestration](09-Containers-and-Orchestration/README.md) | Run container workloads with ECR, ECS, EKS, Fargate, secure supply chains, and production operations. |
+| [10-Infrastructure-as-Code-and-Automation](10-Infrastructure-as-Code-and-Automation/README.md) | Create repeatable AWS environments using CloudFormation, CDK, Terraform, OpenTofu, SAM, and automation tools. |
+| [11-Developer-Tools-and-CI-CD](11-Developer-Tools-and-CI-CD/README.md) | Build secure delivery pipelines, manage artifacts, automate releases, and improve developer workflows. |
+| [12-Observability-and-CloudOps](12-Observability-and-CloudOps/README.md) | Collect evidence, detect failures, operate services, and investigate AWS environments with metrics, logs, traces, events, and automation. |
+| [13-Well-Architected-and-Solutions-Architecture](13-Well-Architected-and-Solutions-Architecture/README.md) | Turn requirements into secure, reliable, efficient, cost-aware, sustainable AWS architectures. |
+| [14-Security-Risk-and-Compliance](14-Security-Risk-and-Compliance/README.md) | Apply identity, data, network, detection, response, audit, risk, and compliance controls across AWS. |
+| [15-Cost-Management-and-FinOps](15-Cost-Management-and-FinOps/README.md) | Measure cloud value, allocate costs, manage commitments, detect waste, and govern cloud spending. |
+| [16-Data-Analytics-and-Streaming](16-Data-Analytics-and-Streaming/README.md) | Build governed batch, streaming, lake, warehouse, search, and business-intelligence platforms. |
+| [17-AI-ML-and-Generative-AI](17-AI-ML-and-Generative-AI/README.md) | Develop, secure, evaluate, deploy, observe, and control machine-learning and generative-AI workloads on AWS. |
+| [18-Migration-Hybrid-and-Edge](18-Migration-Hybrid-and-Edge/README.md) | Assess, mobilize, migrate, validate, modernize, and operate hybrid and edge workloads. |
+| [19-Reliability-Performance-and-Resilience](19-Reliability-Performance-and-Resilience/README.md) | Engineer predictable performance, controlled failure, tested recovery, and measurable service reliability. |
+| [20-Projects](20-Projects/README.md) | Build portfolio-ready AWS systems with implementation guidance, automation, testing, failure exercises, operations, and cleanup. |
+| [21-Labs](21-Labs/README.md) | Practice AWS skills through guided, independent, challenge, failure-injection, security, cost, and production simulation labs. |
+| [22-Troubleshooting](22-Troubleshooting/README.md) | Investigate AWS failures with evidence, hypotheses, exact checks, controlled fixes, recovery verification, and prevention. |
+| [23-Production-Operations](23-Production-Operations/README.md) | Operate AWS services through ownership, monitoring, on-call, change control, incidents, recovery, and continuous improvement. |
+| [24-Architecture-Patterns](24-Architecture-Patterns/README.md) | Compare reusable AWS designs, trade-offs, failure modes, security boundaries, costs, and alternatives. |
+| [25-Certification-Preparation](25-Certification-Preparation/README.md) | Prepare for current AWS certifications with maintained objectives, scenarios, labs, practice assessments, and readiness evidence. |
+| [26-Interview-Preparation](26-Interview-Preparation/README.md) | Prepare for role-based AWS interviews, architecture reviews, troubleshooting scenarios, practical assessments, and leadership discussions. |
+| [27-Engineer-Notebooks](27-Engineer-Notebooks/README.md) | Use disciplined records for AWS changes, investigations, evidence, decisions, reviews, incidents, and handovers. |
+| [28-Toolkit](28-Toolkit/README.md) | Use reviewed scripts, modules, policies, diagnostics, audits, checks, cleanup tools, and reusable templates. |
+| [29-Service-Catalog](29-Service-Catalog/README.md) | Find maintained service records covering capabilities, limits, security, pricing, architecture, operations, and alternatives. |
+| [30-Resources](30-Resources/README.md) | Use curated official documentation, workshops, references, books, videos, events, updates, and learning resources. |
+| [31-Cloud-Adoption-and-Transformation](31-Cloud-Adoption-and-Transformation/README.md) | Connect AWS engineering to business value, people, governance, platform, security, operations, and organizational change. |
+| [32-SaaS-and-Multi-Tenant-Architecture](32-SaaS-and-Multi-Tenant-Architecture/README.md) | Design tenant-aware SaaS platforms with isolation, identity, metering, reliability, security, and cost attribution. |
+| [33-Specialized-Workloads](33-Specialized-Workloads/README.md) | Explore AWS patterns for industries and specialized technologies such as IoT, media, HPC, healthcare, finance, and quantum computing. |
 
-Architecture guidance lives in [`13-Well-Architected-and-Solutions-Architecture`](13-Well-Architected-and-Solutions-Architecture/README.md) and reusable designs live in [`24-Architecture-Patterns`](24-Architecture-Patterns/README.md).
+## Hands-on project standard
 
-## Role-based development
+Projects should guide learners through a complete engineering cycle:
 
-AWS World supports overlapping roles without creating isolated copies of the same material.
+1. Explain the concept and project goal.
+2. Define cost, risk, prerequisites, and architecture.
+3. Confirm the active AWS account, role, and Region.
+4. Prepare the environment.
+5. Show exact commands, configuration, and infrastructure code.
+6. Explain important commands, options, resources, and decisions.
+7. Show representative expected results.
+8. Verify state after each stage.
+9. Introduce controlled failures.
+10. Diagnose failures using evidence and exact checks.
+11. Fix the problem and verify recovery.
+12. Test security, resilience, monitoring, and acceptance criteria.
+13. Clean up resources and confirm that billing has stopped.
+14. Record portfolio evidence and interview talking points.
 
-| Role | Primary capabilities |
-| --- | --- |
-| Solutions Architect | Requirements, service selection, trade-offs, reliability, security, cost, migration, and communication |
-| Cloud Engineer | Accounts, networking, compute, storage, automation, monitoring, and operations |
-| CloudOps Engineer | Observability, incidents, changes, backup, recovery, patching, and operational readiness |
-| Security Engineer | Identity, encryption, network controls, detection, vulnerability management, response, and compliance |
-| DevOps Engineer | CI/CD, infrastructure automation, containers, observability, release safety, and platform integration |
-| Platform Engineer | Landing zones, developer platforms, guardrails, service catalogs, multi-account automation, and reliability |
-| SRE | Service objectives, error budgets, capacity, alert quality, incident response, game days, and toil reduction |
-| Network Engineer | Address planning, routing, DNS, hybrid connectivity, inspection, segmentation, and packet analysis |
-| Data Engineer | Data ingestion, storage, cataloging, processing, streaming, quality, governance, and analytics |
-| AI and ML Engineer | Data preparation, model development, inference, evaluation, MLOps, observability, safety, and cost |
-| FinOps Practitioner | Allocation, forecasting, commitment planning, anomalies, unit economics, and accountability |
-| Auditor or GRC Practitioner | Evidence, configuration, identity, logging, control mapping, exceptions, and continuous assurance |
+## Safety and cost controls
 
-## Certification preparation without examination fraud
+<p align="center">
+  <img src="assets/banners/repository/safety-and-cost.svg" alt="AWS World safety and cost controls" width="620">
+</p>
 
-Certification material follows the current exam guide published by AWS. It connects exam domains to practical implementation, architecture scenarios, service comparisons, troubleshooting, and readiness evidence.
+Every hands-on resource should identify:
 
-AWS World does not accept:
-
-- Leaked examination questions
-- Memorized answer dumps
-- Unauthorized course copies
-- Claims that a question bank guarantees a passing result
-- Material that encourages candidates to violate examination rules
-
-Certifications and exam codes change. The [`Certification Registry`](25-Certification-Preparation/Certification-Registry.md) and [`Exam Version and Retirement Tracker`](25-Certification-Preparation/Exam-Version-and-Retirement-Tracker.md) should be reviewed before beginning a study plan.
-
-## Production safety standard
-
-Every AWS lab, project, command, script, and runbook should state:
-
-- Required account, role, Region, and permissions
 - Estimated cost and Free Tier assumptions
-- Services and resources created
-- Data classification and public exposure risk
-- Resource tags
-- Service quotas and expected capacity
-- Logging and audit requirements
-- Expected runtime
-- Cleanup procedure
-- Cleanup verification
-- Rollback or recovery plan
-- Irreversible actions
+- AWS account, role, and Region requirements
+- Permissions and service quotas
+- Public exposure and data classification risks
+- Resources created and how long they should run
+- Cleanup commands and cleanup verification
+- Irreversible actions and recovery options
 
-Never run unfamiliar automation against a production account. Never publish credentials. Prefer temporary role credentials and federation over long-lived access keys.
+Use a dedicated learning account where possible. Protect the root user with MFA, avoid long-lived access keys, use temporary credentials, configure budgets, and never test destructive scenarios in production.
 
-## Evidence over completion claims
+## Architecture and operational standards
 
-A completed lesson, lab, or project should produce evidence. Depending on the activity, evidence may include:
+Technical material should address the relevant dimensions:
 
-- A successful automated test
-- A verified architecture deployment
-- A cost estimate compared with actual cost data
-- CloudTrail, configuration, metric, log, or trace evidence
-- A security-control test
-- A controlled failure and recovery record
-- A timed backup-restore or disaster-recovery test
-- An architecture decision record
-- A runbook or postmortem
-- A cleaned account with resource-deletion verification
+- Functional requirements and constraints
+- Identity and least privilege
+- Network and data boundaries
+- Availability and failure domains
+- Performance, scaling, quotas, and throttling
+- Logging, metrics, traces, events, and evidence
+- Backup, restore, disaster recovery, and validation
+- Cost drivers and cost controls
+- Automation, repeatability, testing, and rollback
+- Alternatives, trade-offs, and when not to use the design
 
-Reading, watching, copying, or deploying without understanding is not completion.
+## Certifications and service freshness
 
-## Repository standards
-
-Content should be:
-
-- Based on current primary AWS documentation
-- Explicit about versions, Regions, quotas, and limitations
-- Reproducible in an isolated learning account
-- Secure by default
-- Cost-aware
-- Testable
-- Accessible
-- Clear about cleanup and rollback
-- Honest about trade-offs
-- Reviewed when AWS changes a service, exam, price model, or recommended practice
-
-## Official references
-
-- [AWS Documentation](https://docs.aws.amazon.com/)
-- [AWS Well-Architected Framework](https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html)
-- [AWS Architecture Center](https://aws.amazon.com/architecture/)
-- [AWS Security Documentation](https://docs.aws.amazon.com/security/)
-- [AWS Prescriptive Guidance](https://docs.aws.amazon.com/prescriptive-guidance/)
-- [AWS Workshops](https://workshops.aws/)
-- [AWS Training and Certification](https://aws.amazon.com/training/)
-- [AWS Certification](https://aws.amazon.com/certification/)
-- [AWS Service Health Dashboard](https://health.aws.amazon.com/health/status)
-- [AWS What's New](https://aws.amazon.com/new/)
+AWS services, features, prices, quotas, Regions, and certification exams change. Time-sensitive material should record its review date and link to current official AWS documentation. Certification resources should track exam codes, active status, domain changes, and retirement notices.
 
 ## Contributing
 
-Contributions are welcome when they improve technical accuracy, reproducibility, safety, accessibility, or learning value.
+Contributions should be technically accurate, original, testable, safe, accessible, and written for a global audience. New labs and projects must include cost estimates, permissions, verification, failure handling, and cleanup. Never submit credentials, account identifiers, private endpoints, customer data, or unredacted production evidence.
 
-Before contributing:
+## Brand and service disclaimer
 
-1. Read [`CONTRIBUTING.md`](CONTRIBUTING.md).
-2. Follow [`RESOURCE-STANDARD.md`](RESOURCE-STANDARD.md).
-3. Test procedures in an isolated AWS account.
-4. Remove credentials, account identifiers, private addresses, and customer information.
-5. Include cost, security, verification, cleanup, and rollback information.
-6. Link important claims to official AWS documentation.
-7. Do not submit certification dumps or copied proprietary content.
+AWS World is an independent educational repository. It is not affiliated with, endorsed by, or sponsored by Amazon Web Services. Amazon Web Services, AWS, and AWS service names are trademarks of Amazon.com, Inc. or its affiliates.
 
-Security concerns should follow [`SECURITY.md`](SECURITY.md) instead of public issue discussion.
+## License
 
-## License and trademarks
-
-Repository content is governed by [`LICENSE`](LICENSE) and [`NOTICE.md`](NOTICE.md). Third-party material retains its original ownership and license.
-
-AWS, Amazon Web Services, and AWS service names are trademarks of Amazon.com, Inc. or its affiliates. AWS World is an independent educational project. It is not affiliated with, sponsored by, or endorsed by Amazon Web Services.
+Repository materials are protected by the project license. No permission to copy, redistribute, republish, sell, sublicense, train models on, or create derivative commercial material is granted unless the license or written authorization expressly allows it.
 
 ---
 
-<div align="center">
-  <strong>Build it. Secure it. Break it safely. Recover it. Explain every decision.</strong>
-</div>
+<p align="center">
+  <img src="assets/branding/logos/veriqta-logo.png" alt="VERIQTA logo" width="120"><br>
+  <strong>Learn safely. Build deliberately. Operate responsibly.</strong>
+</p>

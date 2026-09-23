@@ -1,12 +1,44 @@
-# AWS World README Assets
+# Assets
 
-These assets are original repository visuals created for the AWS World README. They do not reproduce the AWS logo or official AWS architecture icons.
+[AWS World Home](../README.md) | [Parent Section](../README.md)
 
-| Asset | Purpose | Size |
-| --- | --- | --- |
-| `banners/aws-world-cover-v1.svg` | Repository hero | 1080 x 1350 |
-| `diagrams/aws-world-learning-journey-v1.svg` | Progressive learning model | 1080 x 1350 |
-| `diagrams/aws-world-engineering-domains-v1.svg` | Capability and role domains | 1080 x 1350 |
-| `diagrams/aws-world-well-architected-pillars-v1.svg` | Six-pillar review lens | 1080 x 1350 |
+## Purpose
 
-All visible text uses Arial or the nearest available sans-serif fallback. SVG text remains editable and searchable.
+This area covers **Assets** within the broader AWS World repository. Store approved branding, diagrams, screenshots, recordings, templates, and attribution records used across AWS World.
+
+## What belongs here
+
+- Clear explanations of the underlying concepts and AWS service behavior
+- Architecture, security, reliability, operations, performance, and cost considerations
+- Commands, console paths, API examples, and infrastructure-as-code where appropriate
+- Verification steps, expected results, failure modes, troubleshooting, and recovery
+- Labs, projects, scenarios, decision guidance, or reference material suited to the subject
+
+## How to use this section
+
+1. Read the prerequisites and safety notes before creating AWS resources.
+2. Learn the concepts before following implementation steps.
+3. Complete verification and failure exercises in an authorized learning account.
+4. Delete temporary resources and confirm cleanup.
+5. Record evidence, decisions, costs, and lessons learned.
+
+
+
+## Contents
+
+- [Attribution](attribution/README.md)
+- [Banners](banners/README.md)
+- [Branding](branding/README.md)
+- [Diagrams](diagrams/README.md)
+- [Icons](icons/README.md)
+- [Screenshots](screenshots/README.md)
+- [Templates](templates/README.md)
+- [Terminal Recordings](terminal-recordings/README.md)
+
+## Content status
+
+The repository structure is established. Detailed material will be added and reviewed against the AWS World resource, safety, freshness, and technical standards.
+
+---
+
+**Repository path:** `Assets`

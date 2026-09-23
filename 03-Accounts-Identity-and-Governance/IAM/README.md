@@ -1,0 +1,40 @@
+# Iam
+
+[AWS World Home](../../README.md) | [Parent Section](../README.md)
+
+## Purpose
+
+This area covers **Iam** within the broader AWS World repository. Design secure identities, policies, organizations, landing zones, account boundaries, and governance controls.
+
+## What belongs here
+
+- Clear explanations of the underlying concepts and AWS service behavior
+- Architecture, security, reliability, operations, performance, and cost considerations
+- Commands, console paths, API examples, and infrastructure-as-code where appropriate
+- Verification steps, expected results, failure modes, troubleshooting, and recovery
+- Labs, projects, scenarios, decision guidance, or reference material suited to the subject
+
+## How to use this section
+
+1. Read the prerequisites and safety notes before creating AWS resources.
+2. Learn the concepts before following implementation steps.
+3. Complete verification and failure exercises in an authorized learning account.
+4. Delete temporary resources and confirm cleanup.
+5. Record evidence, decisions, costs, and lessons learned.
+
+
+
+## Contents
+
+- [Access Analysis](Access-Analysis/README.md)
+- [Identity Federation](Identity-Federation/README.md)
+- [Policies And Permissions](Policies-and-Permissions/README.md)
+- [Users Groups And Roles](Users-Groups-and-Roles/README.md)
+
+## Content status
+
+The repository structure is established. Detailed material will be added and reviewed against the AWS World resource, safety, freshness, and technical standards.
+
+---
+
+**Repository path:** `03 Accounts Identity And Governance / Iam`
